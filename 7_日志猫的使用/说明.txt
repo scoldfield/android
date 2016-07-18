@@ -1,0 +1,7 @@
+1、logcat日志猫简介
+	1.1 日志猫分为verbose、info、debug、warn、error五种
+	1.2 安卓提供了Log类来打印日志
+	
+2、在LogCat栏中查看打印的log信息
+	2.1 上面的下拉列表中可以选择只显示info或debug或warn或error信息，或者选择verbose显示全部信息
+	2.2 左边的加号"＋"和减号"－"可以添加过滤器，该过滤器可以设置只显示哪些信息

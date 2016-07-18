@@ -1,0 +1,19 @@
+意图Intent
+
+1、分为"显示意图"和"隐式意图"：
+
+	显示意图：用于开启自己应用的界面
+	隐式意图：用于开启其他应用的界面，一般用于开启系统应用的界面 
+	
+2、界面之间来回传递数据
+	通过intent.putExtra()方法实现。该方法底层使用Map封装的
+	
+3、开启Activity两个方式
+	startActivity()
+	startActivityFromResult()。该方法开启Activity时，还需要一个方法onActivityResult()来接收返回的结果数据。
+	
+4、请求码和结果码
+	分别表示请求哪个页面和从哪个页面返回数据
+	
+5、关闭Activity
+	调用finish()方法

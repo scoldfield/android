@@ -1,0 +1,7 @@
+POST与GET请求的区别
+
+1、请求路径不同
+
+2、post方式要自己组拼请求体的内容
+
+3、post方式比get方式多了2个头信息：Content-Type和Content-Length

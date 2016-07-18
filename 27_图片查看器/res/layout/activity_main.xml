@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cmcc.thread.MainActivity" >
+
+    <EditText 
+        android:id="@+id/et"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="https://pic4.zhimg.com/4a18796a79ccd45670412059538816a7_l.jpg"
+        />
+    
+    <Button 
+        android:id="@+id/bt"
+        android:layout_marginTop="3dp"
+        android:onClick="click"
+       	android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看"
+        />
+    
+    <ImageView 
+        android:id="@+id/iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

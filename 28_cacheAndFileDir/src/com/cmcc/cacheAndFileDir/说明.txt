@@ -1,0 +1,7 @@
+Cache 和 files文件夹的区别
+
+1、getCacheDir()方法和getFileDir()方法会获取该app下分别cache和files两个文件在存储卡上的位置
+
+2、通过手机上的"删除cache"按钮可以清除cache，即清除cache文件夹中的内容
+
+3、通过手机上的"删除data"按钮可以删除cache和files两个文件夹

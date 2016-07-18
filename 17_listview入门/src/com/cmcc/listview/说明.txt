@@ -1,0 +1,6 @@
+1、listview显示数据的原理：MVC模式
+	M:mode。就是数据(或者javabean)
+	V:view。就是listview(相当于javaweb中的jsp)
+	C:adapter。listview需要通过adapter来把数据进行展示(相当于javaweb中的controller)
+	
+2、listview的布局中layout_height属性一般设置为"match_parent"，不用"wrap_content"。因为后者无法计算每个view的高度，就会造成后台不断的校验，不断的调用getView方法去教研

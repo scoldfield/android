@@ -1,0 +1,20 @@
+1、子线程无法直接操作主线程(主线程也叫ui线程)的控件，只有主线程才能更新UI。解决方法是消息机制。
+
+2、ANR异常
+	3.1 ANR异常：Application Not Response，应用无响应异常。通常是主线程(也叫UI线程)报的异常
+	3.2 如果在主线程中进行了耗时的操作(比如，链接网络、拷贝大的数据)，都会报ANR异常
+	3.3 为了避免ANR异常，通常把耗时的操作放到子线程中执行。比如，Android从4.0开始规定，链接网络不能再主线程中进行访问
+	
+3、消息机制：通过子线程向主线程中传递消息Message对象，从而实现子线程间接操作主线程UI。这一过程是通过Handler对象完成的。
+	3.1 Handler原理：通过自定义类，并实现Handler类，并实现其中的handleMessage()方法，该方法具体进行Message对象的操作
+		* 子程序将数据存储到Message对象中
+		* 子线程通过自定义类的对象，发送Message对象
+		* Message被发送到主线程的messageQueue队列中
+		* 主线程中有个Lopper对象，该对象不断检测messageQueue对象，查看其中有无新的message对象
+		* 如果有message对象，那么将该对象取出并传递给自定义对象handler的handleMessage()方法。该方法是前面自定义的针对Message对象的具体操作
+	
+	3.2 Handler使用步骤：
+		[1]主线程定义一个Handler对象
+		[2]重写Handler中的handleMessage()方法
+		[3]在子线程中，通过handler对象去发送消息
+		[4]主线程的handler对象获取消息，就会执行handleMessage()方法，通过该方法去更新UI

@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cmcc.smsSend.MainActivity" >
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="add"
+        android:layout_alignBottom="@id/et_phone"
+        android:layout_alignParentRight="true"
+        android:text="+" />
+
+    <EditText
+        android:id="@+id/et_cont"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/et_phone" />
+    
+    <Button
+        android:id="@+id/bt_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="insert"
+        android:layout_below="@id/et_cont"
+        android:text="插入" />
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="send"
+        android:layout_below="@id/bt_insert"
+        android:text="发送" />
+</RelativeLayout>

@@ -1,0 +1,5 @@
+Handler 与 runOnUiThread的区别
+
+1、如果仅仅就是更新ui，那么就用runOnUiThread这个API即可
+
+2、如果还需要发送消息或者携带数据，那么就用Handler

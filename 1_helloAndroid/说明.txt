@@ -1,0 +1,12 @@
+1、项目结构说明
+	1.1 各个目录说明 
+		src：存源代码
+		gen：R.java文件
+		bin：生成.apk文件
+		assets：资产目录。向该文件中存入目录，不会在R.java中生成配置
+		libs：额外的jar
+		drawable：存的是Android图片资源
+		layout：存的是Android布局
+		values：字符串
+		AndroidManifest.xml：Android的清单文件。Android中四大组件都需要在该文件中配置，
+							包括Activity、broadCastReceiver、service、ContentProvider四个组件

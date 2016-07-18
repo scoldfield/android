@@ -1,0 +1,5 @@
+[1]httpUrlConnection：偶尔使用
+[2]httpClient：了解即可，基本没人用
+[3]asyncHttpClient：用的较多。优点如下：
+	[3.1]访问网络的时候，无需手动开启线程，开源项目中已经封装好了
+	[3.2]可以直接在子线程中对UI Thread中的控件进行操作，无需使用runOnUiThread()方法了

@@ -1,0 +1,1 @@
+SimpleAdapter是用来显示Map封装的数据

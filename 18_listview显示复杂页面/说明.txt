@@ -1,0 +1,16 @@
+ListView显示复杂页面
+
+1、通过一个打气筒inflate，可以把一个布局layout转换成一个View对象
+
+2、打气筒inflater的获取。三种方式：
+	方法一：
+	view = View.inflate(getApplicationContext(), R.layout.item, null);
+                
+	方法二：
+	view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.item, null);
+                
+	方法三：
+	LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+	view = inflater.inflate(R.layout.item, null);
+	
+3、

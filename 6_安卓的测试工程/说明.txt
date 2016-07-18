@@ -1,0 +1,13 @@
+1、测试类不需要像java工程测试一样加上@Test和导入JUnit.jar包，安卓工程已经将其包含进来，只需将测试类实现AndroidTestCase类即可
+
+2、必须在清单文件中引入两个文件
+	(1)加入指令集:
+		<instrumentation
+        	android:name="android.test.InstrumentationTestRunner"
+        	android:targetPackage="com.example.testAndroidProject" />
+    	其中，android:targetPackage为待测试的包名
+    	
+	(2)配置函数库
+		在<application></applicaiton>中写<uses-library android:name="android.test.runner" />
+
+3、如果实在不记得怎么写这两个配置，那么直接新建一个android test application项目，其中的清单文件会写好

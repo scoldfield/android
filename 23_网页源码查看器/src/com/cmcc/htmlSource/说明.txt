@@ -1,0 +1,10 @@
+1、安卓访问网络存在的问题
+	android3.0以上凡是涉及到网络，下载等耗时操作，都不能在主线程中运行，加上以下代码，可以取消严格限制。解决方法：
+	
+	方法一：在方法中加入下面两行代码
+	    StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
+  		StrictMode.setThreadPolicy(policy);
+	
+	方法二：
+		用java创建个线程，在线程中去httpClient访问网络。
+		具体实现看25_创建子线程进行网络访问

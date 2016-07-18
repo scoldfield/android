@@ -1,0 +1,1 @@
+ArrayAdapter是用来显示数组封装的数据

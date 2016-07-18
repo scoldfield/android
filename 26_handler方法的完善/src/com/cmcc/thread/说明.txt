@@ -1,0 +1,9 @@
+1、子线程无法直接操作主线程(主线程也叫ui线程)的控件。解决方法是消息机制
+
+2、通过自定义类，并实现Handler类，并实现其中的handleMessage()方法，该方法具体进行Message对象的操作
+	2.1 子程序将数据存储到Message对象中
+	2.1 子线程通过自定义类的对象，发送Message对象
+	2.3 Message被发送到主线程的messageQueue队列中
+	2.4 主线程中有个Lopper对象，该对象不断检测messageQueue对象，查看其中有无新的message对象
+	2.5 如果有message对象，那么将该对象取出并传递给自定义对象handler的handleMessage()方法。该方法是前面自定义的针对Message对象的具体操作
+	

@@ -1,0 +1,19 @@
+多个页面的跳转实现
+
+1、分别写好每个页面的layout页面
+
+2、分别写好每个activity类，继承Activity，并实现其中的onCreate()方法
+
+3、将每个layout页面绑定到相应的activity类中。通过setContentView()方法
+
+4、在清单列表文件AndroidManifest.xml中配置activity。具体的，在application标签中添加activity标签，name属性为相应的activity类
+
+5、编写逻辑代码
+
+6、从一个Activity转到另一个Activity。通过new Intent(context, XXXActivity.class);实现
+
+7、从一个Activity向另一个Activity传递数据。通过intent.putExtra(key, value)方法实现
+
+8、启动跳转。通过startActivity(intent)方法实现
+
+9、获取传递过来的数据。通过getIntent().getStringExtra(key)等方法获取相应数据

@@ -1,0 +1,10 @@
+ScrollVie控件使用注意：
+
+1、ScrollVie控件可以为TextView控件添加滑动按钮，类似于ListView中的fastScrollEnabled属性。
+	直接将TextView控件放在ScrollVie控件中即可。
+
+2、ScrollVie控件中只能包含一个child控件
+
+3、要想在ScrollVie控件中添加多个child控件，可以将<LinearLayout>控件添加为ScrollVie控件的child控件，
+	再向LinearLayout控件中添加多个控件，即可简介实现向ScrollVie控件中添加多个控件的需求。
+	
